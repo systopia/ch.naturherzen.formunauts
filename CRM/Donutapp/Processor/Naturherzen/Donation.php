@@ -14,7 +14,7 @@
 +--------------------------------------------------------*/
 
 use Tdely\Luhn\Luhn;
-use CRM_Donutapp_ExtensionUtil as E;
+use CRM_Formunauts_ExtensionUtil as E;
 
 class CRM_Donutapp_Processor_Naturherzen_Donation extends CRM_Donutapp_Processor_Naturherzen_Base {
 
