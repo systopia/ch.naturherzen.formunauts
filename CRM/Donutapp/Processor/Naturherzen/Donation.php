@@ -326,7 +326,7 @@ class CRM_Donutapp_Processor_Naturherzen_Donation extends CRM_Donutapp_Processor
     $activity_data = [
       'target_id'         => $contact_id,
       'activity_type_id'  => $this->getRecruitmentActivityTypeID(),
-      'subject'           => 'Raise Together Recruitment (Formunauts)',
+      'subject'           => "Raise Together Recruitment (Formunauts) [{$donation->uid}]",
       'activity_datetime' => date('YmdHiS'),
       'location'          => $donation->location,
       'status_id'         => empty($todos) ? 'Completed' : 'Scheduled',
