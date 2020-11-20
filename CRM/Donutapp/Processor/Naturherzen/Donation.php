@@ -150,6 +150,18 @@ class CRM_Donutapp_Processor_Naturherzen_Donation extends CRM_Donutapp_Processor
         $job_title = 'Student/in';
         break;
 
+      case 6:
+        $job_title = 'Sonstiges';
+        break;
+
+      case 17:
+        $job_title = 'Einzelunternehmer';
+        break;
+
+      case 18:
+        $job_title = 'Hausmann/-frau';
+        break;
+
       default:
         $job_title = '';
         break;
