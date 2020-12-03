@@ -261,7 +261,7 @@ class CRM_Donutapp_Processor_Naturherzen_Donation extends CRM_Donutapp_Processor
       'frequency_unit'     => 'month',
       'date'               => substr($donation->createtime, 0, 10),
       'creation_date'      => substr($donation->createtime, 0, 10),
-      'start_date'         => empty($donation->special1) ? $donation->contract_start_date : $donation->special1,
+      'start_date'         => $donation->contract_start_date,
     ];
 
     // fill BIC
@@ -415,6 +415,7 @@ class CRM_Donutapp_Processor_Naturherzen_Donation extends CRM_Donutapp_Processor
       foreach ($notes as $note) {
         // filter out dates (that's the mandate start date)
         if (preg_match('/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/', $note)) {
+          $todos[] = "Abweichendes Startdatum gewünscht: {$note}";
           continue;
         }
         if (in_array($note, ['phone_optin:yes', 'email_optin:yes', 'post_optin:yes', 'newsletter_optin:yes'])) {
