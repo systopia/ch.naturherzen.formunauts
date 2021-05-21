@@ -23,10 +23,8 @@ abstract class CRM_Donutapp_Processor_Naturherzen_Base extends CRM_Donutapp_Proc
     $this->assertExtensionInstalled('org.project60.bic');
 
     // meddle with the URLs for testing
-    // CRM_Donutapp_API_Client::$apiEndpoint = 'https://staging.donutapp.io/api/v1/';
-    // CRM_Donutapp_API_Client::$oauth2Endpoint = 'https://staging.donutapp.io/o/token/?grant_type=client_credentials';
-    CRM_Donutapp_API_Client::$apiEndpoint = 'https://donutapp.io/api/v1/';
-    CRM_Donutapp_API_Client::$oauth2Endpoint = 'https://donutapp.io/o/token/?grant_type=client_credentials';
+    //CRM_Donutapp_API_Client::$apiEndpoint = 'https://app.formunauts.com/api/v2/';
+    //CRM_Donutapp_API_Client::$oauth2Endpoint = 'https://app.formunauts.com/o/token/';
   }
 
   /**
